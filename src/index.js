@@ -2,7 +2,7 @@ const { span } = require('prelude-ls');
 
 const CountdownTimer = {
   selector: '#timer-1',
-  targetDate: new Date('Jul 17, 2019'),
+  targetDate: new Date('Jul 17, 2022'),
 };
 
 const daysHTML = document.querySelector('span[data-value="days"]');
