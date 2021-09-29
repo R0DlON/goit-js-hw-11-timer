@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":["CountdownTimer","selector","targetDate","Date"],"mappings":";AAAA,IAAIA,eAAe,CACjBC,SAAU,WACVC,WAAY,IAAIC,KAAK","file":"src.afed0aca.js","sourceRoot":"../src","sourcesContent":["new CountdownTimer({\n  selector: '#timer-1',\n  targetDate: new Date('Jul 17, 2019'),\n});\n"]}
