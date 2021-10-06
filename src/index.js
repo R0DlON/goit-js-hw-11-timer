@@ -1,12 +1,13 @@
-const CountdownTimer = {
-  selector: '#timer-1',
-  targetDate: new Date('Oct 24, 2021'),
-};
-
 const daysHTML = document.querySelector('span[data-value="days"]');
 const hoursHTML = document.querySelector('span[data-value="hours"]');
 const minsHTML = document.querySelector('span[data-value="mins"]');
 const secsHTML = document.querySelector('span[data-value="secs"]');
+console.log(minsHTML);
+
+const CountdownTimer = {
+  selector: '#timer-1',
+  targetDate: new Date('Oct 24, 2021'),
+};
 
 function getTime(time) {
   const days = pad(Math.floor(time / (1000 * 60 * 60 * 24)));
