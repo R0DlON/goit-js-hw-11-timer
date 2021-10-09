@@ -6,7 +6,7 @@ console.log(minsHTML);
 
 const CountdownTimer = {
   selector: '#timer-1',
-  targetDate: new Date('Oct 24, 2021'),
+  targetDate: new Date('Oct 21, 2021'),
 };
 
 function getTime(time) {
@@ -22,6 +22,14 @@ function pad(value) {
 }
 
 setInterval(() => {
+  if (
+    daysHTML.textContent === 0 &&
+    hoursHTML.textContent === 0 &&
+    minsHTML.textContent === 0 &&
+    secsHTML.textContent === 0
+  ) {
+    clearInterval(setInterval);
+  }
   const currentTime = Date.now();
   const time = CountdownTimer.targetDate - currentTime;
   // console.log(getTime(time));
@@ -31,3 +39,11 @@ setInterval(() => {
   minsHTML.textContent = getTime(time).mins;
   secsHTML.textContent = getTime(time).secs;
 }, 1000);
+
+// function counter() {
+//   count--;
+//   $("#timer").text(convertSeconds(count));
+//   if (count === 0) {
+//     clearInterval(gameTime);
+//   }
+// }
